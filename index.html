@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>ABPS 1A PORTAL</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!-- LIVE CLOCK -->
+<div id="clock" class="clock"></div>
+
+<!-- LOGIN -->
+<div id="login" class="container">
+  <h1>ABPS 1A Political Science Portal</h1>
+
+  <div class="login-section">
+    <h2>Admin Login</h2>
+    <input type="text" id="admin-password" placeholder="Admin Password">
+    <button onclick="adminLogin()">Login as Admin</button>
+  </div>
+
+  <div class="login-section">
+    <h2>Student Login</h2>
+    <input type="text" id="student-name-input" placeholder="Enter your name">
+    <button onclick="studentLogin()">Login as Student</button>
+  </div>
+</div>
+
+<!-- STUDENT DASHBOARD -->
+<div id="student-dashboard" class="container" style="display:none;">
+  <h1>Welcome, <span id="student-name"></span></h1>
+
+  <div class="card">
+    <h3>Your Tasks</h3>
+    <ul id="tasks-list"></ul>
+  </div>
+
+  <div class="card">
+    <h3>Mark Attendance</h3>
+    <button onclick="markAttendance()">Mark Today</button>
+    <p id="attendance-status"></p>
+  </div>
+
+  <div class="card">
+    <h3>Political Science Resources</h3>
+    <ul id="ps-resources-list"></ul>
+  </div>
+
+  <div class="card">
+    <h3>Announcements</h3>
+    <ul id="announcements-list"></ul>
+  </div>
+
+  <button class="logout-btn" onclick="logout()">Logout</button>
+</div>
+
+<!-- ADMIN DASHBOARD -->
+<div id="admin-dashboard" class="container" style="display:none;">
+  <h1>Admin Dashboard</h1>
+
+  <div class="card">
+    <h3>Manage Tasks</h3>
+    <input type="text" id="new-task" placeholder="New Task">
+    <button onclick="addTask()">Add Task</button>
+    <ul id="task-completion-list"></ul>
+  </div>
+
+  <div class="card">
+    <h3>Upload Political Science Resources</h3>
+    <input type="file" id="ps-file-upload">
+    <button onclick="uploadPSFile()">Upload</button>
+    <ul id="ps-files-list"></ul>
+  </div>
+
+  <div class="card">
+    <h3>Announcements</h3>
+    <input type="text" id="new-announcement" placeholder="New Announcement">
+    <button onclick="postAnnouncement()">Post</button>
+    <ul id="announcements-admin-list"></ul>
+  </div>
+
+  <div class="card">
+    <h3>Attendance</h3>
+    <ul id="attendance-list"></ul>
+  </div>
+
+  <button class="logout-btn" onclick="logout()">Logout</button>
+</div>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
